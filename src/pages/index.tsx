@@ -16,6 +16,10 @@ const Homepage = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const { data, isLoading: searchLoading, isError: searchError } = useSearchMovies(searchQuery);
 
+  const results = data?.results.map((movie: movieProps) => ({
+    ...movie,
+    media_type: 'movie',
+  }));
   const handleMovieClick = (movie: movieProps) => {
     setOpenModal(!openModal);
     setSelectedMovie(movie);
@@ -30,22 +34,22 @@ const Homepage = () => {
     setSearchQuery(query);
   };
 
-  if (searchLoading) return <p>Loading...</p>;
+  if (searchLoading) return <p></p>;
 
   if (searchError) return <p>Error fetching search results</p>;
 
   return (
     <>
-      {data.results.length > 0 && (
+      {results.length > 0 && (
         <div className="py-20 w-full md:w-1/3 mx-0 md:mx-24">
           <SearchBar onSearch={handleSearch} />
         </div>
       )}{' '}
-      {data.results && data.results.length > 0 ? (
+      {results && results.length > 0 ? (
         <SearchResults
           isLoading={searchLoading}
           isError={searchError}
-          data={data.results}
+          data={results}
           handleMovieClick={handleMovieClick}
           query={searchQuery}
         />

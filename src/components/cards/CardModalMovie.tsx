@@ -21,7 +21,7 @@ const CardModalMovie = ({
   handleCloseModal,
   movie,
 }: modalProps & { movie?: movieProps }) => {
-  let timeOutId;
+  let timeOutId: string | number | NodeJS.Timeout;
 
   const modalRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -164,7 +164,7 @@ const CardModalMovie = ({
                     <div className="flex items-center p-6 space-x-2 border-gray-200 rounded-b dark:border-gray-600">
                       <Link
                         to={`/movies/${movie.id}`}
-                        className="w-full font-bold  focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5  focus:z-10 bg-indigo-800 text-gray-300 border-indigo-600 hover:text-white hover:bg-indigo-950 focus:ring-gray-600"
+                        className="w-full font-bold text-center  focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5  focus:z-10 bg-indigo-800 text-gray-300 border-indigo-600 hover:text-white hover:bg-indigo-950 focus:ring-gray-600"
                       >
                         More Details
                       </Link>
