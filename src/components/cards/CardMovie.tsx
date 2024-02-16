@@ -1,8 +1,9 @@
+import { useEffect, useState } from 'react';
+
 import { POSTER_PATH_URL, UNAVAILABLE_POSTER } from '@/configs/config';
 import useFavorites from '@/hooks/api/movies/useFavorite';
 import { convertRating } from '@/libs/rating';
 import { CardMovieProps } from '@/types/types';
-import { useEffect, useState } from 'react';
 
 import { FaHeart } from "react-icons/fa6";
 const CardMovie = ({ movie, onClick }: CardMovieProps) => {

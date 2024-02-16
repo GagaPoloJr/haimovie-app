@@ -1,6 +1,11 @@
-// useFavorites.jsx
 import { useQueryClient } from '@tanstack/react-query';
 import { toast } from 'react-toastify';
+
+//TODO fix the bug on the fovorites
+/**
+ * i dont know why this is still error shit
+ * @returns 
+ */
 
 const useFavorites = () => {
   const queryClient = useQueryClient();
@@ -21,7 +26,7 @@ const useFavorites = () => {
 
     const updatedFavorites = isMovieInFavorites
       ? favorites.filter((fav: any) => fav.id !== movie.id)
-      : [...favorites, {...movie, media_tpye:'movie'}];
+      : [...favorites, { ...movie, media_tpye: 'movie' }];
 
     !isMovieInFavorites
       ? toast.success('Success add to favorite!')

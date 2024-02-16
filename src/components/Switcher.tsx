@@ -7,13 +7,12 @@ const Switcher = () => {
   return (
     <>
       <DarkModeSwitch
-      className='select-none'
-       
+        className="select-none"
         checked={colorTheme === 'dark'}
         onChange={toggleTheme as () => void}
         size={30}
-        moonColor='black'
-        sunColor='white'
+        moonColor="black"
+        sunColor="white"
       />
     </>
   );

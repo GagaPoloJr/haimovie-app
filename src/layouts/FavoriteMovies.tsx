@@ -1,7 +1,4 @@
-import React from 'react';
 import CardMovie from '@/components/cards/CardMovie';
-import { useLatestMovies, usePopularMovies } from '@/hooks/api/movies/useMovieApi';
-import LoadingCardSkeleton from '@/components/loading/LoadingCardSkeleton';
 import useFavorites from '@/hooks/api/movies/useFavorite';
 
 const FavoriteMovies = ({ handleMovieClick }: any) => {

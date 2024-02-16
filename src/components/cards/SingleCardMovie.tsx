@@ -1,7 +1,8 @@
+import { useState } from 'react';
+
 import { POSTER_PATH_URL, UNAVAILABLE_POSTER } from '@/configs/config';
 import { convertRating } from '@/libs/rating';
 import { CardMovieProps } from '@/types/types';
-import { useState } from 'react';
 
 const SingleCardMovie = ({ movie, onClick }: CardMovieProps) => {
   const [isHovered, setIsHovered] = useState(false);

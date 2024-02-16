@@ -1,9 +1,5 @@
-// SearchResults.jsx
-
-import React from 'react';
 import CardMovie from '@/components/cards/CardMovie';
 import LoadingCardSkeleton from '@/components/loading/LoadingCardSkeleton';
-import { useSearchMovies } from '@/hooks/api/movies/useMovieApi';
 
 const SearchResults = ({ data, isLoading, isError, query, handleMovieClick }: any) => {
   if (isLoading) {

@@ -67,21 +67,3 @@ export const fetchMovieById = async (movieId: number) => {
     console.error('Error fetching latest movies:', error);
   }
 };
-
-// export const fetchNowPlayingMovies = async ({ pageParam = 1 }) => {
-//   try {
-//     const response = await axios.get(`${MOVIE_API_URL}/now_playing?api_key=${API_KEY}&page=${pageParam}`);
-//     const nowPlayingMovies = response.data.results.map((movie: movieProps) => ({
-//       ...movie,
-//       media_type: 'movie',
-//     }));
-//     return {
-//       nowPlayingMovies,
-//       nextPage: response.data.page + 1,
-//       totalPages: response.data.total_pages,
-//     };
-//   } catch (error) {
-//     console.error('Error fetching now playing movies:', error);
-//     throw error;
-//   }
-// };

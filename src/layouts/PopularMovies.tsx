@@ -1,9 +1,8 @@
 import React from 'react';
 import CardMovie from '@/components/cards/CardMovie';
-import { useLatestMovies, usePopularMovies } from '@/hooks/api/movies/useMovieApi';
+import { usePopularMovies } from '@/hooks/api/movies/useMovieApi';
 import LoadingCardSkeleton from '@/components/loading/LoadingCardSkeleton';
 import { Link } from 'react-router-dom';
-import { useCurrentPath } from '@/hooks/useCurrentRoute';
 
 const PopularMovies = ({ handleMovieClick, isSinglePage }: any) => {
   const { data, fetchNextPage, hasNextPage, isError, isLoading } = usePopularMovies();
