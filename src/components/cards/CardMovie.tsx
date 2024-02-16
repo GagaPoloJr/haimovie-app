@@ -42,7 +42,7 @@ const CardMovie = ({ movie, onClick }: CardMovieProps) => {
   return (
     <>
       <div className="relative group">
-        <div style={styleCard} className="h-80 rounded-3xl"></div>
+        <div style={styleCard} className="h-80 rounded-3xl bg-slate-500"></div>
 
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity text-white overflow-hidden">
           <div className="bg-slate-700 absolute bottom-0 h-[100%] inset-0 opacity-0 transition-opacity rounded-3xl group-hover:opacity-70"></div>

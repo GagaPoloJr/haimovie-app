@@ -25,7 +25,7 @@ const SingleCardMovie = ({ movie, onClick }: CardMovieProps) => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div style={{ ...styleCard }} className="h-96 md:h-[80vh]"></div>
+        <div style={{ ...styleCard }} className="h-96 md:h-[80vh] bg-slate-500"></div>
         <div
           className={`absolute inset-0 transition-all ${!isHovered ? 'bg-gradient-to-b from-transparent to-white dark:bg-gradient-to-t dark:from-black dark:to-black"' : 'hidden'}`}
         >
