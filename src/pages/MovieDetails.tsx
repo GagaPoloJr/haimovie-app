@@ -1,14 +1,9 @@
-// MovieDetails.jsx
-import Badge from '@/components/badge/Badge';
 import CardModalMovie from '@/components/cards/CardModalMovie';
 import DetailMovieContent from '@/components/details/MovieContent';
 import DetailMovieHeader from '@/components/details/MovieHeader';
 import DetailMovieRelated from '@/components/details/MovieRelated';
-import { POSTER_PATH_URL, UNAVAILABLE_POSTER } from '@/configs/config';
 import { useMovieByMovieId } from '@/hooks/api/movies/useMovieApi';
-import { GenreId } from '@/libs/genre';
-import { convertTime, filterYouTubeVideos, formattedDate } from '@/libs/libs';
-import { convertRating } from '@/libs/rating';
+import { filterYouTubeVideos } from '@/libs/libs';
 import { VideoItem, movieProps } from '@/types/types';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -19,7 +14,7 @@ const MovieDetails = () => {
 
   const { movieId } = useParams();
   const { data, isLoading, isError } = useMovieByMovieId(parseInt(movieId));
- 
+
   const { movieData, reccomendationData = [], videosData } = data || {};
   const videoData = videosData ? filterYouTubeVideos(videosData) : [];
 

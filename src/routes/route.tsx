@@ -1,11 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 
-// import MovieDetails from './MovieDetails';
 import Homepage from '@/pages';
-import MovieDetails from '@/pages/MovieDetails';
-import Latest from '@/pages/Latest';
-import Popular from '@/pages/Popular';
-import Favorite from '@/pages/Favorite';
+import MovieDetails from '../pages/MovieDetails';
+import Latest from '../pages/Latest';
+import Popular from '../pages/Popular';
+import Favorite from '../pages/Favorite';
 
 export const routes = [
   { path: '/', element: <Homepage /> },

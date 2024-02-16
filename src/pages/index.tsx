@@ -8,7 +8,6 @@ import PopularMovies from '@/layouts/PopularMovies';
 import SearchBar from '@/components/search/SearchBar';
 import SearchResults from '@/layouts/SearchMovies';
 import { useSearchMovies } from '@/hooks/api/movies/useMovieApi';
-import useFavorites from '@/hooks/api/movies/useFavorite';
 
 const Homepage = () => {
   const [selectedMovie, setSelectedMovie] = useState<movieProps | null>(null);
